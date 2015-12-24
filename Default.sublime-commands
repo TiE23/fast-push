@@ -1,0 +1,7 @@
+[
+  {
+    "id": "pushcurrentfile",
+    "caption": "Push the current file",
+    "command": "push_current_file"
+  }
+]
