@@ -56,7 +56,8 @@ class PushCurrentFileCommand(sublime_plugin.TextCommand):
     paths = getPaths(self)
 
     if len(paths[2]) != 0 and len(paths[3]) != 0:
-      command = ['/Users/kyleg/bin/push', paths[2]]
+      user = os.environ['USER']
+      command = ['/Users/' + user + '/bin/push', paths[2]]
       simpleShellExecute(command, paths[3])
       sublime.status_message("Pushed %s from %s" % (paths[2], paths[3]))
 
